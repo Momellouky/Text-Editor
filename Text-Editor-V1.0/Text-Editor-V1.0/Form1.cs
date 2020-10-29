@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO; 
 
 namespace Text_Editor_V1._0
 {
@@ -63,6 +64,66 @@ namespace Text_Editor_V1._0
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void setColor(Color color)
+        {
+            if (isBackColor.Checked)
+            {
+                mainTxtBox.SelectionBackColor = color; 
+            }
+            else
+            {
+                mainTxtBox.SelectionColor = color; 
+            }    
+        }
+        private void blackColor_Click(object sender, EventArgs e)
+        {
+            setColor(((Panel)sender).BackColor); 
+        }
+
+        private void colorswatchBtn_Click(object sender, EventArgs e)
+        {
+            ColorDialog newColorDialog = new ColorDialog();
+            DialogResult showColorSwatches = newColorDialog.ShowDialog(); 
+
+            if(showColorSwatches == DialogResult.OK)
+            {
+                if (isBackColor.Checked) 
+                    mainTxtBox.SelectionBackColor = newColorDialog.Color; 
+                else
+                {
+                    mainTxtBox.SelectionColor = newColorDialog.Color; 
+                }
+            }
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\\Untitled.txt";
+
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Title = "Save File | Type-Awsome";
+            saveFile.Filter = "Text Files |*.txt";
+            saveFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            saveFile.FileName = "Untitled"; 
+            DialogResult showSaveWindow = saveFile.ShowDialog(); 
+
+            try
+            {
+                if (showSaveWindow == DialogResult.OK)
+                {
+                    string name = Path.GetFileName(saveFile.FileName);
+                    string pathFile = saveFile.FileName;
+                    string content = mainTxtBox.Text;
+                    File.WriteAllText(pathFile, content); 
+                }
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error"); 
+            }
+
         }
     }
 }

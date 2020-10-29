@@ -166,6 +166,7 @@
             this.saveBtn.TabIndex = 12;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // separatorTwo
             // 
@@ -191,6 +192,7 @@
             this.whiteColor.Name = "whiteColor";
             this.whiteColor.Size = new System.Drawing.Size(30, 30);
             this.whiteColor.TabIndex = 10;
+            this.whiteColor.Click += new System.EventHandler(this.blackColor_Click);
             // 
             // blackColor
             // 
@@ -199,6 +201,7 @@
             this.blackColor.Name = "blackColor";
             this.blackColor.Size = new System.Drawing.Size(30, 30);
             this.blackColor.TabIndex = 9;
+            this.blackColor.Click += new System.EventHandler(this.blackColor_Click);
             // 
             // colorswatchBtn
             // 
@@ -213,6 +216,7 @@
             this.colorswatchBtn.TabIndex = 0;
             this.colorswatchBtn.Text = "Color swatch";
             this.colorswatchBtn.UseVisualStyleBackColor = false;
+            this.colorswatchBtn.Click += new System.EventHandler(this.colorswatchBtn_Click);
             // 
             // separatorOne
             // 

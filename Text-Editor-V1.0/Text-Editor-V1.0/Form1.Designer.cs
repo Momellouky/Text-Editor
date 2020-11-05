@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.topBar = new System.Windows.Forms.Panel();
             this.filenameLbl = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
@@ -52,6 +54,7 @@
             this.fontList = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainTxtBox = new System.Windows.Forms.RichTextBox();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.topBar.SuspendLayout();
             this.dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSize)).BeginInit();
@@ -91,6 +94,7 @@
             this.closeBtn.Size = new System.Drawing.Size(40, 25);
             this.closeBtn.TabIndex = 1;
             this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // appName
             // 
@@ -348,6 +352,15 @@
             this.mainTxtBox.TabIndex = 0;
             this.mainTxtBox.Text = "";
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +374,7 @@
             this.Name = "mainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Type-awsome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.topBar.ResumeLayout(false);
             this.topBar.PerformLayout();
@@ -397,6 +411,7 @@
         private System.Windows.Forms.Label filenameLbl;
         private System.Windows.Forms.Label versionLbl;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 

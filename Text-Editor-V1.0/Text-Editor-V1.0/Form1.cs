@@ -63,6 +63,7 @@ namespace Text_Editor_V1._0
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            NeedToClose = true; 
             Application.Exit(); 
         }
 
@@ -124,6 +125,32 @@ namespace Text_Editor_V1._0
                 MessageBox.Show(exp.Message, "Error"); 
             }
 
+        }
+
+        bool NeedToClose = false; 
+        private void mainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!NeedToClose)
+            { 
+                e.Cancel = true;
+                this.Hide();
+                notifyIcon.ShowBalloonTip(1000, "Type-Awsome", "Type-awsome is still running safly. ",ToolTipIcon.Info);
+            }
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show(); 
+        }
+
+        private void notifyIcon_BalloonTipClicked(object sender, EventArgs e)
+        {
+            this.Show(); 
         }
     }
 }

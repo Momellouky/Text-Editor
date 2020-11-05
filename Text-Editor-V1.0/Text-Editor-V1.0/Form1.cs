@@ -152,5 +152,20 @@ namespace Text_Editor_V1._0
         {
             this.Show(); 
         }
+
+        private void mainTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            int counter = mainTxtBox.Text.Length;
+            if ( mainTxtBox.Text.Contains("\n"))
+            {
+                charCounter.Text = (counter - 1).ToString(); 
+            }
+            else
+            {
+                charCounter.Text = counter.ToString();
+            }
+
+
+        }
     }
 }

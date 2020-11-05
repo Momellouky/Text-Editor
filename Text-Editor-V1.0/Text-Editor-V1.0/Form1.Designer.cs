@@ -55,9 +55,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainTxtBox = new System.Windows.Forms.RichTextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.charCounter = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             this.dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSize)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // topBar
@@ -336,6 +338,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(18)))));
+            this.panel1.Controls.Add(this.charCounter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(200, 475);
             this.panel1.Name = "panel1";
@@ -351,6 +354,7 @@
             this.mainTxtBox.Size = new System.Drawing.Size(700, 450);
             this.mainTxtBox.TabIndex = 0;
             this.mainTxtBox.Text = "";
+            this.mainTxtBox.TextChanged += new System.EventHandler(this.mainTxtBox_TextChanged);
             // 
             // notifyIcon
             // 
@@ -360,6 +364,15 @@
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
+            // charCounter
+            // 
+            this.charCounter.AutoSize = true;
+            this.charCounter.Location = new System.Drawing.Point(363, 2);
+            this.charCounter.Name = "charCounter";
+            this.charCounter.Size = new System.Drawing.Size(13, 13);
+            this.charCounter.TabIndex = 0;
+            this.charCounter.Text = "0";
             // 
             // mainWindow
             // 
@@ -373,7 +386,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Type-awsome";
+            this.Text = "v";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.topBar.ResumeLayout(false);
@@ -381,6 +394,8 @@
             this.dashboard.ResumeLayout(false);
             this.dashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSize)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -412,6 +427,7 @@
         private System.Windows.Forms.Label versionLbl;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Label charCounter;
     }
 }
 

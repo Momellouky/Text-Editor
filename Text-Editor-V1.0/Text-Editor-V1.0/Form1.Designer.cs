@@ -53,9 +53,9 @@
             this.FontLabel = new System.Windows.Forms.Label();
             this.fontList = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.charCounter = new System.Windows.Forms.Label();
             this.mainTxtBox = new System.Windows.Forms.RichTextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.charCounter = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             this.dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSize)).BeginInit();
@@ -345,6 +345,15 @@
             this.panel1.Size = new System.Drawing.Size(700, 25);
             this.panel1.TabIndex = 2;
             // 
+            // charCounter
+            // 
+            this.charCounter.AutoSize = true;
+            this.charCounter.Location = new System.Drawing.Point(363, 2);
+            this.charCounter.Name = "charCounter";
+            this.charCounter.Size = new System.Drawing.Size(13, 13);
+            this.charCounter.TabIndex = 0;
+            this.charCounter.Text = "0";
+            // 
             // mainTxtBox
             // 
             this.mainTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -364,15 +373,6 @@
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
-            // 
-            // charCounter
-            // 
-            this.charCounter.AutoSize = true;
-            this.charCounter.Location = new System.Drawing.Point(363, 2);
-            this.charCounter.Name = "charCounter";
-            this.charCounter.Size = new System.Drawing.Size(13, 13);
-            this.charCounter.TabIndex = 0;
-            this.charCounter.Text = "0";
             // 
             // mainWindow
             // 

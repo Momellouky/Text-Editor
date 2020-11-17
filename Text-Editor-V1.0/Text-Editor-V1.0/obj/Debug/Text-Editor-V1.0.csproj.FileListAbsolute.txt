@@ -1,10 +1,13 @@
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\bin\Debug\Text-Editor-V1.0.exe.config
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\bin\Debug\Text-Editor-V1.0.exe
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\bin\Debug\Text-Editor-V1.0.pdb
-C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.csprojAssemblyReference.cache
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text_Editor_V1._0.mainWindow.resources
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text_Editor_V1._0.Properties.Resources.resources
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.csproj.GenerateResource.cache
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.csproj.CoreCompileInputs.cache
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.exe
 C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.pdb
+C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\bin\Debug\swatchesPanelLib.dll
+C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.csproj.CopyComplete
+C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\bin\Debug\swatchesPanelLib.pdb
+C:\Users\Mohamed Mellouky\Documents\csharp projects\Text-Editor\Text-Editor-V1.0\Text-Editor-V1.0\obj\Debug\Text-Editor-V1.0.csprojAssemblyReference.cache

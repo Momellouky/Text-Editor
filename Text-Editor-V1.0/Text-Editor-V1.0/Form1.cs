@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO; 
+using System.IO;
+using swatchesPanelLib; 
 
 namespace Text_Editor_V1._0
 {
@@ -85,6 +86,7 @@ namespace Text_Editor_V1._0
 
         private void colorswatchBtn_Click(object sender, EventArgs e)
         {
+            /* 
             ColorDialog newColorDialog = new ColorDialog();
             DialogResult showColorSwatches = newColorDialog.ShowDialog(); 
 
@@ -97,6 +99,28 @@ namespace Text_Editor_V1._0
                     mainTxtBox.SelectionColor = newColorDialog.Color; 
                 }
             }
+            */
+
+            string[] colors = { "#264653", 
+                "#e9c46a", 
+                "#e76f51",
+                "#e63946",
+                "#ffb703",
+                "#9a031e",
+                "#e9c46a",
+                "#e76f51",
+                "#e63946",
+                "#ffb703",
+                "#e9c46a",
+                "#e76f51",
+                "#e63946",
+                "#ffb703",
+                "#9a031e",
+                "#9a031e",
+            };
+            Class1.loadForm();
+            Class1.CreateCloseBtn();
+            Class1.createDefaultColors(colors);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)

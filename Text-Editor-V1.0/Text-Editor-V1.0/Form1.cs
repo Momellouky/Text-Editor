@@ -101,22 +101,22 @@ namespace Text_Editor_V1._0
             }
             */
 
-            string[] colors = { "#264653", 
-                "#e9c46a", 
-                "#e76f51",
-                "#e63946",
-                "#ffb703",
-                "#9a031e",
+            string[] colors = { "#264653",
                 "#e9c46a",
                 "#e76f51",
-                "#e63946",
-                "#ffb703",
                 "#e9c46a",
                 "#e76f51",
-                "#e63946",
-                "#ffb703",
-                "#9a031e",
-                "#9a031e",
+                "#e9c46a",
+                "#e76f51",
+                "#e76f51",
+                "#e9c46a",
+                "#e76f51",
+                "#e76f51",
+                "#e9c46a",
+                "#e76f51",
+                "#e76f51",
+                "#e9c46a",
+                "#e76f51",
             };
             Class1.loadForm();
             Class1.CreateCloseBtn();

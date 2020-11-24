@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorSwatchesConsoleHelp", "ColorSwatchesConsoleHelp\ColorSwatchesConsoleHelp.csproj", "{FD0DE1A2-DE91-48B7-93F6-C94440D7510C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorSwatches", "ColorSwatches\ColorSwatches.csproj", "{7E51306C-E232-461C-9147-3AEBE26F63F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0DE1A2-DE91-48B7-93F6-C94440D7510C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0DE1A2-DE91-48B7-93F6-C94440D7510C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0DE1A2-DE91-48B7-93F6-C94440D7510C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0DE1A2-DE91-48B7-93F6-C94440D7510C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E51306C-E232-461C-9147-3AEBE26F63F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E51306C-E232-461C-9147-3AEBE26F63F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E51306C-E232-461C-9147-3AEBE26F63F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E51306C-E232-461C-9147-3AEBE26F63F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EF4EF5F-5B5D-4554-AC77-A16B6599DBCE}
+	EndGlobalSection
+EndGlobal

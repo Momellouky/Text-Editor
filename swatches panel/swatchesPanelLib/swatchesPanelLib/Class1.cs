@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Bunifu;
 using BunifuAnimatorNS;
 using System.Globalization;
+using System.IO; 
 
 namespace swatchesPanelLib
 {
@@ -112,37 +113,67 @@ namespace swatchesPanelLib
 
             // need to add max color. 
             // add new color btn. 
-            // refix logic. 
-            //List<int> bgColorCode = new List<int>();
-            
-            int tempWidth = 51;
-            for (int counter = 0; counter < colorCode.Length; counter++)
+
+            /* Docs: 
+             * This function creates and shows colors in the color swatches form. 
+             * number of colors shown = number of color codes given in the string array colorCode.
+             */
+
+            int v_margin = close_btn.Height + 37; // 37 = to a margin defined by the designer.
+            int width = 51,
+                h_margin = 20,
+                height = v_margin,
+                max_number = 15;
+
+            StreamWriter sw = new StreamWriter("file.txt");
+            sw.WriteLine("Created fromc code to check where is my file."); 
+            sw.Close(); 
+
+
+
+
+            for (int counter = 1; counter <= colorCode.Length; counter++)
             {
+                if (counter == max_number + 1)
+                    break; 
                 PictureBox ColorBox = new PictureBox();
+                //PictureBox addColorBtn = new PictureBox(); 
+
 
                 ColorBox.Width = color_square_width;
                 ColorBox.Height = color_square_height;
 
-                //ColorBox.BackColor = Color.FromArgb(colorCode[counter]);
-                Color _Color = ColorTranslator.FromHtml(colorCode[counter]);
-                ColorBox.BackColor = _Color;
-                if (tempWidth >= mainPanel.Right - 51)
+                //addColorBtn.Width = color_square_width;
+                //addColorBtn.Height = color_square_height; 
+
+                if (counter == colorCode.Length || counter == max_number )
                 {
-                    int newtempWidth = 51; 
-                    ColorBox.Location = new Point(newtempWidth, close_btn.Height + color_square_height + 37*2);
-                    newtempWidth += color_square_height + 20; // this code needs to be rechecked ( may be logic issues ) 
+                    //ColorBox.Image = Image.FromFile(@"C:\Users\Mohamed Mellouky\Desktop\addColorBtn.png");
+                    ColorBox.Image = Image.FromFile(@"..\..\..\..\icon\addColorBtn.png");
                 }
                 else
                 {
-                    ColorBox.Location = new Point(tempWidth, close_btn.Height + 37);
+                    Color _Color = ColorTranslator.FromHtml(colorCode[counter - 1]);
+                    ColorBox.BackColor = _Color;
                 }
-                
+
+                //addColorBtn.Image = Image.FromFile("addColorBtn.png");
+
+
+                if (width >= mainPanel.Right - 51)
+                {
+                    width = 51;
+                    v_margin ++;
+                    height += v_margin; 
+                }
+                ColorBox.Location = new Point(width, height);
+                //addColorBtn.Location = new Point(width + h_margin, height);
 
                 mainPanel.Controls.Add(ColorBox);
+                //mainPanel.Controls.Add(addColorBtn); 
                 
 
-                tempWidth += color_square_height + 20;
-                if (counter == colorCode.Length) ColorBox.Dispose(); // # this code need to be checked.
+                width += color_square_height + h_margin;
             }
 
             mainPanel.Show();

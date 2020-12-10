@@ -121,6 +121,8 @@ namespace Text_Editor_V1._0
             Class1.loadForm();
             Class1.CreateCloseBtn();
             Class1.createDefaultColors(colors);
+            Class1.colorField();
+            Class1.showPanel(); 
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
